@@ -25,7 +25,7 @@ The major components of  NATRAJ can be classified as follows:-
 * Two sets of hybrid Neural Networks model [3] [4] [5] [7] [8] at both entry and exit points one for packet filtering and another for traffic flow analyzation for checking and cross validation of the traffic entering or leaving NATRAJ.
 
 <p float="left">
-  <img src="/Screenshot(3).png" width="400", height="200" />
+  <img src="/Screenshot(3).png" width="300", height="300" />
 </p>
 
 Table 1. Representation of the stored values in local database for authentication purpose
@@ -80,7 +80,7 @@ N2 - The neural network for validating the traffic and destination address made 
 P - Proxy generator plays an important role in the entire setup as the un - encrypted traffic leaving the server needs to be masked and make it impossible to get the actual device location inside the network in case an eavesdrop attack takes place out of NATRAJ then the it creates a great difficulty for an attacker as internal end to end communication inside the server hides every device address in the form of hashes and the outflow of the traffic is masked. The send back for the corresponding request reaches the device only after the request is verified by our neural networks set up, encrypted and redirected to the corresponding devices with help of D3 and Main database (M).
 
 <p float="left">
-  <img src="Screenshot(4)" width="500", height="500" />
+  <img src="Screenshot(4)" width="300", height="300" />
 </p>
 
 Table 2. Representation of the mapping of the Proxy IP mapped with send and get request
@@ -89,30 +89,32 @@ Table 2. Representation of the mapping of the Proxy IP mapped with send and get 
 Finally the proxy IP address used to make request can be mapped with the associated request made from the devices to NATRAJ for redirecting the coming traffic to NATRAJ.
 
 
-Benefits
+# Benefits
 
 The entire set up prevents the devices with any sort of redirection that could be possible to create any possible attack. The set up of Neural Networks will help to monitor the traffic outflow from the devices and ensure to cut any sort of sypware activities that could be possible in case any infected device connects to the network. The storing of hash valued IP addresses and information leaving or entering NATRAJ help in cross validation of information send or received by the devices connected to the network.
 
-Future use cases
+# Future use cases
 
 As the increase in cyber criminal activities tend to grow in the fore-coming future and the devices connected to the network NATRAJ servers could be used to provide a proxy cum active neural packet filtering firewall to monitor the inflow and outflow of the traffic from any sort device which is using the internet and provide a remote service at a nominal fee. In this way NATRAJ could be used to secure the communication and networks for an organization as well as individual cyber security. 
 
 
-Conclusion
+# Conclusion
+
 In general NATRAJ is a set up consisting of packet filtering firewall with active neural network intrusion detection cross validated with the help of various data sets and hash ledger created by the NATRAJ itself consisting of addresses like device ID, router ID, send requests, get requests and proxy used in the last before accessing the internet. This way any device accessing the internet using NATRAJ via any organization or individual remote access can be rest ensured against malicious activities.
 Every device connected to NATRAJ is using an end to end protocol to communicate to the server and using a ledger system to store every device and request in the form of hash values which at last are used for monitoring the traffic for any sort of redirect or malicious activities. The entire NATRAJ set up cross validates that the devices connected to NATRAJ don’t leave any sensitive information wide open even to the NATRAJ and other devices using the server. Hashing of every device and request made and stored for cross validation might seem like a tedious and extra effort but helps to create a ledger data sets which can be used by our neural networks to monitor and reject any sort of malicious activities. Proxy for communication purposes used by NATRAJ can be put into use as the request and devices don’t leave their identity open to the internet and in case the traffic needs to monitored by any sort of authorities then the entire NATRAJ needs to be monitored for any illicit activity and if found can be tracked with permission by accessing the ledger of the NATRAJ used by any organization. In this manner NATRAJ don’t break any protocol by hiding the information sent or received to the internet but prevents it from any unauthorized access. As monitoring entire traffic used by organization don’t leave any device connected to the NATRAJ wide open to be targeted individually but if misconducts takes place and any authority want investigation then only authorized can access the ledger by having proper authorization leaving the rest unethical attackers helpless.
 
 The NATRAJ server basically works on the principle of packet filtering firewall with neural networks to actively monitor our traffic and information send or received by the internet. This adds three layers of security to the following networks:-
-1.The traffic passed or send by the devices using NATRAJ server are always analyzed in such a manner that every bit of information is analyzed for malicious activities.
-2.The hashing of requests associated to the device addresses ensures that the internal security of the networks are ensured.
-3.Proxy at the gateway ensures that the traffic leaving NATRAJ never reveals the device information or address inside NATRAJ and using proxy in such manner to access the internet don’t break any protocol as the request are made using an internal ledger which can  be cross validated if demanded.
+
+* The traffic passed or send by the devices using NATRAJ server are always analyzed in such a manner that every bit of information is analyzed for malicious activities.
+* The hashing of requests associated to the device addresses ensures that the internal security of the networks are ensured.
+* Proxy at the gateway ensures that the traffic leaving NATRAJ never reveals the device information or address inside NATRAJ and using proxy in such manner to access the internet don’t break any protocol as the request are made using an internal ledger which can  be cross validated if demanded.
 
 
-Acknowledgments
+# Acknowledgments
 Not belonging to any cyber security or networking domain faced several instances which led to personal findings and the idea originated to form the protocol which is totally based upon compiling the ideas collected from several papers and integrating them into one to form an individual protocol which could be used to act like a line of defence in safeguarding any organization’s or individual’s cyber-space security and would always thank every teacher of mine in order to learn what I can. The protocol doesn’t guarantee security from any sort of attack possible but the idea is to write a procedure which could be followed in order to safeguard as situation demands it.
 
 
-References
+# References
 
 [1] IP Packet Filtering using Hash Table for Dedicated Real Time IP Filter - I.J. Wireless and Microwave Technologies, 2017, 1, 24-29  Published Online January 2017 in MECS(http://www.mecs-press.net) 
 DOI: 10.5815/ijwmt.2017.01.03
