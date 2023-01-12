@@ -30,6 +30,7 @@ The major components of  NATRAJ can be classified as follows:-
 
 Table 1. Representation of the stored values in local database for authentication purpose
 
+```
 if(DID == ReID)
 {
 else if(did == ReID)
@@ -39,6 +40,7 @@ else if (ReID == SeID)
 connection successful
 {
 break
+```
 
 So this is an overview for the hash table that can be used to store the generated hashed IP addresses and packets moving in traffic inside the network. The hashed addresses like the device id and router id acts like the first line of defence to rest ensure that the authorized devices gets access to the internet using the NATRAJ server and the hashed addresses stop any form of internal intrusion if possible as the devices information is secured using the hash values and values cannot be manipulated.
 
