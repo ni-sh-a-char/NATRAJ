@@ -51,7 +51,9 @@ Encryption techniques are not presented in the paper as it is left on the organi
 The pair of Neural Networks checks for the traffic and packets in parallel on the both entry and exit points of the server to cross check address and requests ledger if the traffic and packets are redirected to meant destinations and not eavesdropped by any sort of un-ethical activities and if found can be terminated.
 The exit points are ensured with proxy generator to mask the IP addresses by which the request is leaving the server and every IP and request are stored in local database (D3) dynamically which gets replaced when the server gets a response from the internet. In this manner every request that leaves the server and every traffic received by the server can be can be cross validated and encrypted - decrypted to follow an internal end to end communication protocol, leaving the attackers helpless and clueless about the actual address or requests made by the devices to the internet. So in this manner every device is making the request to the server and internet in last don’t reveal their actual sensitive information like which sort of device is used for making the requests, making any kind of attack really difficult to take place as the entire server and devices connected to server are making it really difficult to find the devices connected inside the network masked under the hashed values stored inside ledgers making it impossible to manipulate.
 
-
+<p float="left">
+  <img src="Capture20230108125346.png" width="500", height="200" />
+</p>
 
 Diagram and overview of NATRAJ 
 
