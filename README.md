@@ -24,9 +24,12 @@ The major components of  NATRAJ can be classified as follows:-
 
 * Two sets of hybrid Neural Networks model [3] [4] [5] [7] [8] at both entry and exit points one for packet filtering and another for traffic flow analyzation for checking and cross validation of the traffic entering or leaving NATRAJ.
 
-![Screenshot](Screenshot(3))
+<p float="left">
+  <img src="/Screenshot(3).png" width="500", height="200" />
+</p>
 
 Table 1. Representation of the stored values in local database for authentication purpose
+
 if(DID == ReID)
 {
 else if(did == ReID)
