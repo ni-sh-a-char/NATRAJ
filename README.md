@@ -44,7 +44,7 @@ break
 
 So this is an overview for the hash table that can be used to store the generated hashed IP addresses and packets moving in traffic inside the network. The hashed addresses like the device id and router id acts like the first line of defence to rest ensure that the authorized devices gets access to the internet using the NATRAJ server and the hashed addresses stop any form of internal intrusion if possible as the devices information is secured using the hash values and values cannot be manipulated.
 
- Findings and Solutions
+ # Findings and Solutions
 
 The protocol presented in the paper targets the flow of the traffic through a constraint route that is our NATRAJ server and every device connected to a network make requests to the NATRAJ server and our server will make requests to the Internet by using proxy In a way the protocol prevents the devices from directly accessing the Internet where it is wide open to several kinds of attacks. The server acts like a firewall and a proxy address for each and every device connected to NATRAJ. The storing of device’s MAC address locally in our databases (M) in encrypted form, then checking the locally stored values at the time of device connection to the router or before making request to the server acts like the first line of defense as it removes any unauthorized access from making requests to NATRAJ. Devices connected to the same network would be prevented from revealing their identity to the network in order to prevent any attacker from internally infecting the network. Hashing of every request with their respective address i.e. the device id and router id helps in forming a ledger that could be used to cross validate the request made and information received to the corresponding requests. Analyzing these ledgers with the help of neural networks help to monitor and analyze that the requests made to the server and received from the internet don’t follow any sort of redirects or leaks that lead to data breaches or unethical spying of the devices.
 Encryption techniques are not presented in the paper as it is left on the organization side which particular form of encryption technique to use when the set up is actually put into use. The general idea behind encryption is to map every device corresponding to their send and get request made to the server and transferred to the internet and cross map for validating and redirecting the request received from the internet to the respective devices connected to NATRAJ. The entire set up can play an effective role to encrypt the traffic and put a cross validation technique at every step made by the traffic leaving or entering NATRAJ, delivered or received by the devices making request to NATRAJ.
@@ -55,7 +55,7 @@ The exit points are ensured with proxy generator to mask the IP addresses by whi
   <img src="Capture20230108125346.png" width="500", height="500" />
 </p>
 
-Diagram and overview of NATRAJ 
+# Diagram and overview of NATRAJ 
 
 
 
@@ -79,7 +79,9 @@ N2 - The neural network for validating the traffic and destination address made 
 
 P - Proxy generator plays an important role in the entire setup as the un - encrypted traffic leaving the server needs to be masked and make it impossible to get the actual device location inside the network in case an eavesdrop attack takes place out of NATRAJ then the it creates a great difficulty for an attacker as internal end to end communication inside the server hides every device address in the form of hashes and the outflow of the traffic is masked. The send back for the corresponding request reaches the device only after the request is verified by our neural networks set up, encrypted and redirected to the corresponding devices with help of D3 and Main database (M).
 
-
+<p float="left">
+  <img src="Screenshot(4)" width="500", height="500" />
+</p>
 
 Table 2. Representation of the mapping of the Proxy IP mapped with send and get request
 
