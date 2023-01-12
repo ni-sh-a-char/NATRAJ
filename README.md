@@ -10,6 +10,10 @@
 
 [piyushmishra.professional@gmail.com](piyushmishra.professional@gmail.com)
 
+https://www.linkedin.com/posts/piyush-mishra-00_activity-7019258293558685697-rgoO?utm_source=share&utm_medium=member_desktop
+
+https://medium.com/@piyushmishra.professional/natraj-an-end-to-end-encrypted-local-server-with-neural-networks-for-packet-filtering-firewall-cad2430e7772
+
 # Abstract
 In the modern times where cyber - attacks are increasing at an alarming rate. The key components of the internet that is the traffic needs to be secured. The internet traffic flows in the form of packets which travel from one destination to the other. The major cyber - attacks target these packets to compromise device and network security. The paper proposes a fortified technique of internet providing to any enterprise, organization or individual by providing a local server NATRAJ to which every device can make requests to and the requests are handled by NATRAJ in such a manner that the internal security of the network stays ensured. At last these requests can communicate with the outer network and NATRAJ acts like a firewall. The proposed idea according to the paper points towards assigning a unique hash value to every device, router and their respective send and get request made to the server. This hash table can be put into use to properly deliver the packets inside the internal networks and can be ensured secured against any internal network breaches. The hash provided requests can be processed through our neural network to check for malicious requests send or received as the other neural network can monitor the directed traffic. Both of the neural network systems can act like a two factor authentication system to cross verify the packets and the address to which they will be delivered and the entire system will act like a two factor authentication firewall for the internal network which will in last communicate with the outer network or internet.
 
