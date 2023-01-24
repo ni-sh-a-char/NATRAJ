@@ -1,0 +1,21 @@
+<MaltegoEntity id="netcap.SCTPAuditRecords" displayName="SCTPAuditRecords" displayNamePlural="SCTPAuditRecords" description="An archive of SCTP audit records" category="Netcap Archives" smallIconResource="netcap/insert_drive_file_red" largeIconResource="netcap/insert_drive_file_red" allowedRoot="true" conversionOrder="2147483647" visible="true">
+ <Properties value="properties.sctpauditrecords" displayValue="properties.sctpauditrecords">
+  <Groups></Groups>
+  <Fields>
+   <Field name="properties.sctpauditrecords" type="string" nullable="true" hidden="false" readonly="false" description="" displayName="SCTPAuditRecords">
+    <SampleValue>-</SampleValue>
+   </Field>
+   <Field name="path" type="string" nullable="true" hidden="false" readonly="false" description="path to the audit records on disk" displayName="Path">
+    <SampleValue></SampleValue>
+   </Field>
+  </Fields>
+ </Properties>
+ <Converter>
+  <Value>^(.+(\/|\\)(SCTP)\.ncap(\.gz)?)</Value>
+  <RegexGroups>
+   <RegexGroup property="path"></RegexGroup>
+   <RegexGroup property=""></RegexGroup>
+   <RegexGroup property="properties.sctpauditrecords"></RegexGroup>
+  </RegexGroups>
+ </Converter>
+</MaltegoEntity>

@@ -1,0 +1,21 @@
+<MaltegoEntity id="netcap.PCAP" displayName="PCAP" displayNamePlural="PCAP" description="A packet capture dump file" category="Netcap" smallIconResource="netcap/sd_storage_black" largeIconResource="netcap/sd_storage_black" allowedRoot="true" conversionOrder="2147483647" visible="true">
+ <Properties value="properties.pcap" displayValue="properties.pcap">
+  <Groups></Groups>
+  <Fields>
+   <Field name="properties.pcap" type="string" nullable="true" hidden="false" readonly="false" description="" displayName="PCAP">
+    <SampleValue>-</SampleValue>
+   </Field>
+   <Field name="path" type="string" nullable="false" hidden="false" readonly="false" description="Absolute path to the PCAP file" displayName="Path">
+    <SampleValue></SampleValue>
+   </Field>
+  </Fields>
+ </Properties>
+ <Converter>
+  <Value>^(.+(\/|\\)(.*)\.pcap(ng)?)</Value>
+  <RegexGroups>
+   <RegexGroup property="path"></RegexGroup>
+   <RegexGroup property=""></RegexGroup>
+   <RegexGroup property="properties.pcap"></RegexGroup>
+  </RegexGroups>
+ </Converter>
+</MaltegoEntity>

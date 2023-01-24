@@ -1,0 +1,21 @@
+<MaltegoEntity id="netcap.IPv6AuditRecords" displayName="IPv6AuditRecords" displayNamePlural="IPv6AuditRecords" description="An archive of IPv6 audit records" category="Netcap Archives" smallIconResource="netcap/insert_drive_file_goldenrod" largeIconResource="netcap/insert_drive_file_goldenrod" allowedRoot="true" conversionOrder="2147483647" visible="true">
+ <Properties value="properties.ipv6auditrecords" displayValue="properties.ipv6auditrecords">
+  <Groups></Groups>
+  <Fields>
+   <Field name="properties.ipv6auditrecords" type="string" nullable="true" hidden="false" readonly="false" description="" displayName="IPv6AuditRecords">
+    <SampleValue>-</SampleValue>
+   </Field>
+   <Field name="path" type="string" nullable="true" hidden="false" readonly="false" description="path to the audit records on disk" displayName="Path">
+    <SampleValue></SampleValue>
+   </Field>
+  </Fields>
+ </Properties>
+ <Converter>
+  <Value>^(.+(\/|\\)(IPv6)\.ncap(\.gz)?)</Value>
+  <RegexGroups>
+   <RegexGroup property="path"></RegexGroup>
+   <RegexGroup property=""></RegexGroup>
+   <RegexGroup property="properties.ipv6auditrecords"></RegexGroup>
+  </RegexGroups>
+ </Converter>
+</MaltegoEntity>
