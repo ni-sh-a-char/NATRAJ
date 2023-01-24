@@ -1,0 +1,21 @@
+<MaltegoEntity id="netcap.VRRPAuditRecords" displayName="VRRPAuditRecords" displayNamePlural="VRRPAuditRecords" description="An archive of VRRP audit records" category="Netcap Archives" smallIconResource="netcap/insert_drive_file_thistle" largeIconResource="netcap/insert_drive_file_thistle" allowedRoot="true" conversionOrder="2147483647" visible="true">
+ <Properties value="properties.vrrpauditrecords" displayValue="properties.vrrpauditrecords">
+  <Groups></Groups>
+  <Fields>
+   <Field name="properties.vrrpauditrecords" type="string" nullable="true" hidden="false" readonly="false" description="" displayName="VRRPAuditRecords">
+    <SampleValue>-</SampleValue>
+   </Field>
+   <Field name="path" type="string" nullable="true" hidden="false" readonly="false" description="path to the audit records on disk" displayName="Path">
+    <SampleValue></SampleValue>
+   </Field>
+  </Fields>
+ </Properties>
+ <Converter>
+  <Value>^(.+(\/|\\)(VRRP)\.ncap(\.gz)?)</Value>
+  <RegexGroups>
+   <RegexGroup property="path"></RegexGroup>
+   <RegexGroup property=""></RegexGroup>
+   <RegexGroup property="properties.vrrpauditrecords"></RegexGroup>
+  </RegexGroups>
+ </Converter>
+</MaltegoEntity>

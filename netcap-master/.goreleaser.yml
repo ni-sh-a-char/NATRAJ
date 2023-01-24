@@ -1,0 +1,142 @@
+builds:
+  - main: ./cmd
+    binary: net
+    env:
+      - CGO_ENABLED=1
+    id: netcap
+    goos:
+      - darwin
+    ldflags:
+      - ""
+    goarch:
+      - amd64
+  - main: ./cmd
+    binary: macOS_nodpi/net
+    id: netcap_macOS_nodpi
+    env:
+      - CGO_ENABLED=1 # needed to compile gopacket for arm64
+    goos:
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - ""
+    flags:
+      - -tags=nodpi
+  - main: ./cmd
+    id: netcap_nodpi
+    binary: net
+    env:
+    #- CGO_ENABLED=1
+    # experiments to compile godpi with nDPI module
+    #- CC=/usr/local/Cellar/mingw-w64/7.0.0_2/bin/x86_64-w64-mingw32-gcc
+    #- CXX=/usr/local/Cellar/mingw-w64/7.0.0_2/bin/x86_64-w64-mingw32-g++
+    #- LDFLAGS="-L/usr/local/opt/libpcap/lib -L/usr/local/Cellar/liblinear/2.30/lib -s -w -lndpi -lpcap -lm -pthread"
+    #- CFLAGS="-I/usr/local/Cellar/libpcap/1.9.1/include/"
+    #- CPPFLAGS="-I/usr/local/opt/libpcap/include -I/usr/local/Cellar/liblinear/2.30/include -I/usr/local/Cellar/mingw-w64/7.0.0_1/toolchain-x86_64/x86_64-w64-mingw32/include"
+    #- PKG_CONFIG_PATH="/usr/local/opt/libpcap/lib/pkgconfig"
+
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    goos:
+      - windows
+
+    # Custom ldflags templates.
+    # Default is `-s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}`.
+    ldflags:
+      - "" # -L /usr/local/opt/libpcap/lib -s -w
+    flags:
+      - -tags=nodpi
+    goarch:
+      - amd64
+
+archives:
+  - id: "netcap"
+    builds: [ 'net' ]
+    files:
+      - LICENSE
+      - README.md
+      - types/cpp/*
+      - types/csharp/*
+      - types/java/*
+      - types/js/*
+      - types/python/*
+      - types/rust/*
+      - types/swift/*
+      - types/netcap.pb.go
+  - id: "netcap_macOS_nodpi"
+    builds: [ 'netcap_macOS_nodpi' ]
+    files:
+      - LICENSE
+      - README.md
+      - types/cpp/*
+      - types/csharp/*
+      - types/java/*
+      - types/js/*
+      - types/python/*
+      - types/rust/*
+      - types/swift/*
+      - types/netcap.pb.go
+  - id: "netcap_nodpi"
+    builds: [ 'netcap_nodpi' ]
+    files:
+      - LICENSE
+      - README.md
+      - types/cpp/*
+      - types/csharp/*
+      - types/java/*
+      - types/js/*
+      - types/python/*
+      - types/rust/*
+      - types/swift/*
+      - types/netcap.pb.go
+
+        #nfpms:
+#  -
+#    id: "netcap"
+#    builds: ['netcap']
+#    formats:
+#        - deb
+#    maintainer: "Philipp Mieden <dreadl0ck@protonmail.ch>"
+#    description: "A framework for secure and scalable network traffic analysis"
+#    license: "GPL v3"
+#    vendor: "netcap.io"
+#    homepage: "https://netcap.io/"
+#    file_name_template: "{{.ProjectName}}_{{.Version}}_{{.Os}}-{{.Arch}}"
+#    replacements:
+#      amd64: 64bit
+#      386: 32bit
+#      arm: ARM
+#      arm64: ARM64
+#      darwin: macOS
+#      linux: Linux
+#      windows: Windows
+#      openbsd: OpenBSD
+#      netbsd: NetBSD
+#      freebsd: FreeBSD
+
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+
+brews:
+  -
+    tap:
+      owner: dreadl0ck
+      name: homebrew-formulas
+    homepage: "https://github.com/dreadl0ck/netcap"
+    description: "A framework for secure and scalable network traffic analysis"
+
+before:
+  hooks:
+  # You may remove this if you don't use go modules.
+  #- go mod download
+  # you may remove this if you don't need go generate
+  #- go generate ./...

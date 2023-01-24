@@ -1,0 +1,21 @@
+<MaltegoEntity id="netcap.ICMPv4AuditRecords" displayName="ICMPv4AuditRecords" displayNamePlural="ICMPv4AuditRecords" description="An archive of ICMPv4 audit records" category="Netcap Archives" smallIconResource="netcap/insert_drive_file_aqua" largeIconResource="netcap/insert_drive_file_aqua" allowedRoot="true" conversionOrder="2147483647" visible="true">
+ <Properties value="properties.icmpv4auditrecords" displayValue="properties.icmpv4auditrecords">
+  <Groups></Groups>
+  <Fields>
+   <Field name="properties.icmpv4auditrecords" type="string" nullable="true" hidden="false" readonly="false" description="" displayName="ICMPv4AuditRecords">
+    <SampleValue>-</SampleValue>
+   </Field>
+   <Field name="path" type="string" nullable="true" hidden="false" readonly="false" description="path to the audit records on disk" displayName="Path">
+    <SampleValue></SampleValue>
+   </Field>
+  </Fields>
+ </Properties>
+ <Converter>
+  <Value>^(.+(\/|\\)(ICMPv4)\.ncap(\.gz)?)</Value>
+  <RegexGroups>
+   <RegexGroup property="path"></RegexGroup>
+   <RegexGroup property=""></RegexGroup>
+   <RegexGroup property="properties.icmpv4auditrecords"></RegexGroup>
+  </RegexGroups>
+ </Converter>
+</MaltegoEntity>
