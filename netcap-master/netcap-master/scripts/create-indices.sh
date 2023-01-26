@@ -1,1 +1,0 @@
-net capture -elastic-user elastic -elastic-pass "$ELASTIC_PASS" -kibana "$KIBANA_URL" -gen-elastic-indices
