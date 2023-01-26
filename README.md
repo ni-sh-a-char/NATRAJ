@@ -1,0 +1,1 @@
+Various Neural Network Models which could be used for network intrusion some are referenced from the reference papers and rest continued. The neural networks models which could be used as per paper defines them.
